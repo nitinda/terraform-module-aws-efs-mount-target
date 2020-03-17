@@ -64,7 +64,10 @@ _The variables required in order for the module to be successfully called from t
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|:---:|
-| **_tags_** | _A mapping of tags to assign to the resource_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
+| **_file\_system\_id_** | _The ID of the file system for which the mount target is intended_ | _string_ | **_Required_** |
+| **_subnet\_id_** | _The ID of the subnet to add the mount target in_ | _string_ | **_Required_** |
+| **_ip\_address_** | _The address at which the file system <br/> may be mounted via the mount target_ | _string_ |  **_Optional <br/> (Default - null)_** |
+| **_security\_groups_** | _A list of up to 5 VPC security group IDs_ | _list(string)_ |  **_Optional <br/> (Default - [])_** |
 
 
 ---
