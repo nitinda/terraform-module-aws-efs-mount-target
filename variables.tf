@@ -12,10 +12,13 @@ variable "ip_address" {
 
 variable "security_groups" {
   description = "A list of up to 5 VPC security group IDs"
+  type        = list(string)
+  default     = []
 }
 
 variable "tags" {
-    description = "A mapping of tags to assign to the resource"
-    type        = "map"
-    default     = {}
+  description = "A mapping of tags to assign to the resource"
+  type        = map(string)
+  default     = {}
 }
+
