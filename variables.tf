@@ -8,6 +8,7 @@ variable "subnet_id" {
 
 variable "ip_address" {
   description = "The address at which the file system may be mounted via the mount target"
+  default     = null
 }
 
 variable "security_groups" {
@@ -21,4 +22,3 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
-
