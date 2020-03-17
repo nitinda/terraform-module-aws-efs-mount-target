@@ -49,12 +49,25 @@ _Below we are able to check the resources that are being created as part of this
 _To use this module, add the following call to your code:_
 
 ```tf
-module "efs" {
+module "efs_mount_target" {
   source = "git::https://github.com/nitinda/terraform-module-aws-efs-mount-target.git?ref=master"
 
-
+  file_system_id = var.file_system_id
+  subnet_id      = var.subnet_id
 }
 ```
+
+```tf
+module "efs_mount_target" {
+  source = "git::https://github.com/nitinda/terraform-module-aws-efs-mount-target.git?ref=master"
+
+  file_system_id = var.file_system_id
+  subnet_id      = var.subnet_id
+
+  security_groups = [var.security_groups]
+}
+```
+
 ---
 
 ## Inputs
